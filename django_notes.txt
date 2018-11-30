@@ -9,6 +9,7 @@ $ python -m django --version
 $ django-admin startproject mysite
 
 3. Create a new app:
+To create your app, make sure you’re in the same directory as manage.py
 $ python manage.py startapp app_name
 
 4. Connect to git
@@ -36,7 +37,42 @@ urlpatterns = [
 ]
 NOTE: The include() function allows referencing other URLconfs
 
-9.
+9. Database:
+Configuration at settings.py on project
+$ python manage.py migrate
+
+10. Models (Database tables, ex:)
+from django.db import models
+class Question(models.Model):
+    question_text = models.CharField(max_length=200)
+    pub_date = models.DateTimeField('date published')
+class Choice(models.Model):
+    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    choice_text = models.CharField(max_length=200)
+    votes = models.IntegerField(default=0)
+
+11. Activating models (https://docs.djangoproject.com/en/2.1/intro/tutorial02/#activating-models)
+To include the app in our project, we need to add a reference to its configuration class in the INSTALLED_APPS setting
+Edit the mysite/settings.py file and add that dotted path to the INSTALLED_APPS setting. Ex:
+INSTALLED_APPS = [
+    'app_name.apps.app_nameConfig',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+NOTE: the app_nameConfig name comes from proj\app\apps.py
+
+12. Make migration:
+$ python manage.py makemigrations app
+
+13. To see generated SQL:
+$ python manage.py sqlmigrate app_name 0001
+
+14. Run migrations:
+$ python manage.py migrate
 
 
 
