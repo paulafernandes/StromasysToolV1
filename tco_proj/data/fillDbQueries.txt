@@ -1,0 +1,41 @@
+file = open('data/systems.txt', 'r')
+lines = file.readlines()
+for line in lines:
+  newsystem = SystemTable(system_name=line)
+  newsystem.save()
+
+file = open('data/licences.txt', 'r')
+lines = file.readlines()
+for line in lines:
+  names = line.split(',')
+  licence_name = names[0]
+  licence_cost = names[1]
+  newlicence = LicenceTable(licence_name=licence_name, licence_cost=licence_cost)
+  newlicence.save()
+
+
+file = open('data/models.txt', 'r')
+lines = file.readlines()
+for line in lines:
+  names = line.split(',')
+  model_name = names[0]
+  power_name = names[1]
+  power_watt = names[2]
+  s = SystemTable()
+  s.id = names[3]
+  newmodel = ModelTable(model_name=model_name, power_name=power_name, power_watt=power_watt, id_system=s)
+  newmodel.save()
+  
+
+file = open('data/cpus.txt', 'r')
+lines = file.readlines()
+for line in lines:
+  names = line.split(',')
+  min_c  = names[0]
+  max_c = names[1]
+  m = ModelTable()
+  m.id = names[2]
+  l = LicenceTable()
+  l.id = names[3]
+  newcpu = CpuTable(min_cpu=min_c, max_cpu=max_c, id_model=m, id_licence=l)
+  newcpu.save()

@@ -1,0 +1,43 @@
+AlphaServer 400,i_400_power,300,1
+AlphaServer 1000,i_1000_power,450,1
+AlphaServer 800,i_800_power,300,1
+AlphaServer 1200,i_1200_power,450,1
+AlphaServer 2000,i_2000_power,800,1
+AlphaServer 4000,i_4000_power,900,1
+AlphaServer 2100,i_2100_power,800,1
+AlphaServer 4100,i_4100_power,900,1
+AlphaServer DS10,i_ds10_power,300,1
+AlphaServer DS20,i_ds20_power,780,1
+AlphaServer ES40,i_es40_power,2400,1
+AlphaServer GS80,i_gs80_power,3450,1
+AlphaServer 160,i_gs160_power,6600,1
+AlphaServer 320,i_gs320_power,11700,1
+A410,i_a410_power,400,2
+A510,i_a510_power,400,2
+A520,i_a520_power,400,2
+N4010,i_n4010_power,2000,2
+N4020,i_n4020_power,2250,2
+N4030,i_n4030_power,2600,2
+N4040,i_n4040_power,3000,2
+SPARCstation 5,i_sparcstation5_power,200,3
+SPARCstation 10,i_sparcstation10_power,200,3
+SPARCstation 20,i_sparcstation20_power,350,3
+Ultra 1,i_ultra1_power,260,3
+Ultra 2,i_ultra2_power,350,3
+Enterprise 450,i_enterprise450_power,832,3
+Ultra 3000,i_ultra3000_power,530,3
+Ultra 4000,i_ultra4000_power,1370,3
+Sun Fire V440,i_sunv440_power,650,3
+Sun Fire V880,i_sunv880_power,2108,3
+Sun Fire V6800,i_sunv6800_power,6460,3
+Sun Blade 2000,i_blade2000_power,670,3
+VAX 4000-106,i_vax4000106_power,215,4
+VAX 3100-96,i_vax310096_power,160,4
+VAX 4000-90,i_vax400090_power,215,4
+MicroVAX,i_microvax_power,215,4
+VAXServer,i_vaxserver_power,350,4
+VAX 4000-108,i_vax4000108_power,215,4
+VAX 3100-98,i_vax310098_power,160,4
+VAX 4700/4705,i_vax4700_power,850,4
+VAX 6310,i_vax6310_power,2500,4
+VAXServer 6000,i_vax6000_power,3500,4
