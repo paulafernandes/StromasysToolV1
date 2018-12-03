@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="{% static 'tco_app/main.css' %}">
+    <script src="{% static 'tco_app/scripts.js' %}"></script>
         <title>Stromasys - TCO</title>
 </head>
 <body>
@@ -23,8 +24,9 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarToggle">
             <div class="navbar-nav mr-auto">
-              <a class="nav-item nav-link" href="{% url 'index-page' %}">Home</a>
-            </div>
+                    <a class="nav-item nav-link" href="{% url 'index-page' %}">Home</a>
+                    <a class="nav-item nav-link" href="{% url 'teste-page' %}">TesteArea</a>
+                </div>
           </div>
         </div>
       </nav>
@@ -32,14 +34,7 @@
     <main role="main" class="container">
       <div class="row">
         <div class="col-md-8">
-          {% if messages %}
-            {% for message in messages %}
-              <div class="alert alert-{{ message.tags }}">
-                {{ message }}
-              </div>
-            {% endfor %}
-          {% endif %}
-          {% block content %}{% endblock %}
+          {% block content %}{% endblock content %}
         </div>
       </div>
     </main>

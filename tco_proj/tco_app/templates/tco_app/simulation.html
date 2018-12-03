@@ -1,0 +1,13 @@
+{% extends "tco_app/index.html" %}
+
+{% block content %}
+<div class="content-section">
+    <div class="dropdown">
+        <select id="allsystems">
+                {% for s in systems %}
+                    <option value="{{ s.system_name }}">{{ s.system_name }}</option>
+                {% endfor %}
+            </select>
+    </div>
+</div>
+{% endblock content %}
