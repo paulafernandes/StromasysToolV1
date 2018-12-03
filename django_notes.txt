@@ -74,6 +74,13 @@ $ python manage.py sqlmigrate app_name 0001
 14. Run migrations:
 $ python manage.py migrate
 
+15. Creating an admin user
+$ python manage.py createsuperuser
+
+16. Start the development server
+$ python manage.py runserver
+
+17. Make the poll app modifiable in the admin (https://docs.djangoproject.com/en/2.1/intro/tutorial02/#make-the-poll-app-modifiable-in-the-admin)
 
 
 

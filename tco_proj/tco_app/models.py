@@ -22,7 +22,7 @@ class LicenceTable(models.Model):
     licence_cost = models.IntegerField(default=0)
 
     def __str__(self):
-        return self.licence_cost
+        return self.licence_name
 
 class CpuTable(models.Model):
     min_cpu = models.IntegerField(default=0)
@@ -30,3 +30,6 @@ class CpuTable(models.Model):
     id_model = models.ForeignKey(ModelTable, on_delete=models.CASCADE)
     id_licence = models.ForeignKey(LicenceTable, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return str(self.id_model) + ' ' + str(self.min_cpu) + ' - ' + str(self.max_cpu) + ' CPU'
+        # return self.id_model + ' ' + self.min_cpu + ' - ' + self.max_cpu + ' CPU'
