@@ -80,7 +80,10 @@ $ python manage.py createsuperuser
 16. Start the development server
 $ python manage.py runserver
 
-17. Make the poll app modifiable in the admin (https://docs.djangoproject.com/en/2.1/intro/tutorial02/#make-the-poll-app-modifiable-in-the-admin)
-
+17. Make the app modifiable in the admin (https://docs.djangoproject.com/en/2.1/intro/tutorial02/#make-the-poll-app-modifiable-in-the-admin)
+Open the app_name/admin.py file, and edit, ex:
+from django.contrib import admin
+from .models import Question
+admin.site.register(Question)
 
 

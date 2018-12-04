@@ -1,0 +1,5 @@
+https://www.devinterface.com/en/blog/how-to-implement-two-dropdowns-dependent-on-each-other-using-django-and-jquery
+
+Note:
+Missing the call to templatetags.py page
+????
