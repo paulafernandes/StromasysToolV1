@@ -1,15 +1,11 @@
 {% extends "tco_app/index.html" %}
 
 {% block content %}
+{% load custom_tags %}
 <div class="content-section">
     <form method="GET" action="" accept-charset="utf-8">
 		<div class="dropdown">
-			<select id="allsystems">
-				<option value="0">Select a System</option>
-				{% for s in systems %}
-				<option value="{{ s.id }}">{{ s.system_name }}</option>
-				{% endfor %}
-			</select>
+	        {% system_to_html %}
 		</div>
 		<div class="dropdown">
 			<select id="allmodels" disabled="true">
@@ -17,5 +13,9 @@
 			</select>
 		</div>
 	</form>
+	<div id="divContent">
+	Original
+	</div>
+
 </div>
 {% endblock content %}
