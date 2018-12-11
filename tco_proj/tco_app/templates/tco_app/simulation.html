@@ -2,12 +2,20 @@
 
 {% block content %}
 <div class="content-section">
-    <div class="dropdown">
-        <select id="allsystems">
-                {% for s in systems %}
-                    <option value="{{ s.system_name }}">{{ s.system_name }}</option>
-                {% endfor %}
-            </select>
+    <div class="form-group">
+        <label for="allsystems">System</label>
+        <select class="form-control" id="allsystems">
+            <option value="0">Select a System</option>
+            {% for s in systems %}
+            <option value="{{ s.id }}">{{ s.system_name }}</option>
+            {% endfor %}
+        </select>
     </div>
+    <div class="form-group">
+        <label for="allmodels">Model</label>
+        <select class="form-control" id="allmodels">
+			<option value="0">Select a Model</option>
+		</select>
+	</div>
 </div>
 {% endblock content %}

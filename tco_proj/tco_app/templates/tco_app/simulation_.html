@@ -1,0 +1,23 @@
+{% extends "tco_app/index.html" %}
+
+{% block content %}
+{% load custom_tags %}
+<div class="content-section">THIS
+    <form method="POST" accept-charset="utf-8" id="getModelForm">
+		{% csrf_token %}
+		<div class="dropdown">
+	        {% system_to_html %}
+		</div>
+		<input type="submit" value="Send" />
+		<div class="dropdown">
+			<select id="allmodels" disabled="true">
+				<option value="0">Select a Model</option>
+			</select>
+		</div>
+	</form>
+	<div id="divContent">
+	Original
+	</div>
+
+</div>
+{% endblock content %}
