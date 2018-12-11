@@ -1,3 +1,5 @@
+NOTE: Bypass Powershell run script problem:
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6
 **********************************************************
 https://docs.djangoproject.com/en/2.1/intro/tutorial01/
 **********************************************************
