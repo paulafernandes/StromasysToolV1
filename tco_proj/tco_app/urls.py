@@ -13,4 +13,5 @@ urlpatterns = [
     # path('tco_app/about.html', views.index, name='index'),
     # (r’^brand/(?P<brand>[-\w]+)/all_json_models/$’, ‘all_json_models’),
     path('simulation_page/<int:pk>/all_json_models/', views.all_json_models, name='all_json_models'),
+    path('simulation_page/<int:pk>/all_json_cpus/', views.all_json_cpus, name='all_json_cpus'),
 ]
