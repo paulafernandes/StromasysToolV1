@@ -41,13 +41,9 @@
 					<label for="allcurrency">Currency</label>
 					<select class="form-control" id="allcurrency">
 						<option value="0">Select Currency</option>
-						<option value="EUR">Euro</option>
-						<option value="USD">US Dollar</option>
-						<option value="GBP">British Pound</option>
-						<option value="CAD">Canadian Dollar</option>
-						<option value="CHF">Swiss Franc</option>
-						<option value="JPY">Japanese Yen</option>
-						<option value="AUD">Australian Dollar</option>
+                        {% for c in currency %}
+						<option value="{{ c.iso_code }}">{{ c.country }}</option>
+                        {% endfor %}
 					</select>
 				</div>
 			</div>

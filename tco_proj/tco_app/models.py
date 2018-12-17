@@ -33,3 +33,11 @@ class CpuTable(models.Model):
     def __str__(self):
         return str(self.id_model) + ' ' + str(self.min_cpu) + ' - ' + str(self.max_cpu) + ' CPU'
         # return self.id_model + ' ' + self.min_cpu + ' - ' + self.max_cpu + ' CPU'
+
+class CurrencyTable(models.Model):
+    country = models.CharField(max_length=50)
+    iso_code = models.CharField(max_length=10)
+    locale_code = models.CharField(max_length=50)
+
+    def __str__(self):
+        return str(self.country)

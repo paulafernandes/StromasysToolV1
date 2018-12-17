@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currency = $( "#allcurrency option:selected" ).val();
         var url = "/simulation_page/" + idcpu + "/" + payperyear + "/" + currency + "/json_simulation/";
         $.getJSON(url, function(savings) {
-            console.log(savings);
+            console.log(JSON.stringify(savings));
         });
     });
     
