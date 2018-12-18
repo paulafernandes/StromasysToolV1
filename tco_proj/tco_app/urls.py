@@ -4,8 +4,8 @@ from . import views
 from .views import all_json_models
 
 urlpatterns = [
-    path('', views.index, name='index-page'),
-    path('teste_page', views.modelsNames, name='teste-page'),
+    # path('', views.index, name='index-page'),
+    path('', views.system_choice, name='sims-page'),
     path('simulation_page', views.system_choice, name='sims-page'),
     path('simulation_page/<int:pk>/all_json_models/', views.all_json_models, name='all_json_models'),
     path('simulation_page/<int:pk>/all_json_cpus/', views.all_json_cpus, name='all_json_cpus'),
