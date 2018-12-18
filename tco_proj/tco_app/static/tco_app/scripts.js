@@ -45,13 +45,13 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         pay = $('#txtPay').val();
         coin = $("select#allcurrency option:selected").val();
-        cpus = $("select#allcpus option:selected").val();
-        if (pay != "" && coin != "" && cpus != "") {        
-			var idcpu;
-			if ($('#cpulabel').css('display') == 'block')
-            idcpu = $('#cpulabel').attr('cpuid');
-			else
-            idcpu = $( "#allcpus option:selected" ).val();
+        var idcpu;
+        if ($('#lblCpu').css('display') == 'block')
+                idcpu = $('#cpulabel').attr('cpuid');
+        else
+            idcpu = $("#allcpus option:selected" ).val();
+
+            if (pay != "" && coin != "" && idcpu != "") {        
 			payperyear = $('#txtPay').val();
 			currency = $( "#allcurrency option:selected" ).val();
 			var url = "/simulation_page/" + idcpu + "/" + payperyear + "/" + currency + "/json_simulation/";
