@@ -40,4 +40,4 @@ class CurrencyTable(models.Model):
     locale_code = models.CharField(max_length=50)
 
     def __str__(self):
-        return str(self.country)
+        return str(self.country) + ', ' + str(self.iso_code) + ', ' + str(self.locale_code)
